@@ -13,6 +13,7 @@ fn main() {
     let include_args = vec![
         "-isystem".to_string(),
         format!("{}/include/", dst.display()),
+        "-I/Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk/usr/include".to_string(),
     ]
     .into_iter();
     let bindings = bindgen::Builder::default()
